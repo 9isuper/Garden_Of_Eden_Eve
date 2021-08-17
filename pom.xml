@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.9isuper.eve</groupId>
+    <artifactId>gdoe-eve</artifactId>
+    <version>1.0.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>伊甸园-夏娃</name>
+    <description>Garden Of Eden - Eve</description>
+
+    <parent>
+        <groupId>com.9isuper.eden</groupId>
+        <artifactId>gdoe-parent</artifactId>
+        <version>1.0.0.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <url>https://github.com/9isuper/Garden_Of_Eden_Eve</url>
+
+    <scm>
+        <connection>scm:git:git@github.com:9isuper/Garden_Of_Eden_Eve.git</connection>
+        <developerConnection>scm:git:git@github.com:9isuper/Garden_Of_Eden_Eve.git</developerConnection>
+        <url>https://github.com/9isuper/Garden_Of_Eden_Adam</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>YongLe.Zou</name>
+            <email>YongLe.Zou@9isuper.com</email>
+            <url>https://github.com/9isuper</url>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>
