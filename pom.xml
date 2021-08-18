@@ -10,6 +10,15 @@
     <name>伊甸园-夏娃</name>
     <description>Garden Of Eden - Eve</description>
 
+    <properties>
+        <gdoe-assets.version>1.0.0.1</gdoe-assets.version>
+    </properties>
+
+    <modules>
+        <module>gdoe-eve-common</module>
+        <module>gdoe-eve-boot</module>
+    </modules>
+
     <parent>
         <groupId>com.9isuper.eden</groupId>
         <artifactId>gdoe-parent</artifactId>
@@ -42,13 +51,5 @@
             <url>https://github.com/9isuper</url>
         </developer>
     </developers>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-    </dependencies>
-
 
 </project>
