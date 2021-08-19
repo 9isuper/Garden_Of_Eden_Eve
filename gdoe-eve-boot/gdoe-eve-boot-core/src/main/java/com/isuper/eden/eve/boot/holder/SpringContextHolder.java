@@ -51,7 +51,6 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     return rootRealPath;
   }
 
-
   /**
    * getBean
    *
@@ -66,10 +65,14 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     return (T) applicationContext.getBean(name);
   }
 
-
   public static <T> T getBean(Class<T> requiredType) {
     assertContextInjected();
-    return applicationContext.getBean(requiredType);
+    return (T) applicationContext.getBean(requiredType);
+  }
+
+  public static <T> T getBean(String name, Class<T> requiredType) {
+    assertContextInjected();
+    return (T) applicationContext.getBean(name, requiredType);
   }
 
   /**
