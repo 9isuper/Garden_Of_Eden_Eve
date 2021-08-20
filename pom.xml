@@ -5,12 +5,13 @@
 
     <groupId>com.9isuper.eve</groupId>
     <artifactId>gdoe-eve</artifactId>
-    <version>1.0.0.0-SNAPSHOT</version>
+    <version>1.0.0.1</version>
     <packaging>pom</packaging>
     <name>伊甸园-夏娃</name>
     <description>Garden Of Eden - Eve</description>
 
     <properties>
+        <current.new.version>1.0.0.1</current.new.version>
         <gdoe-assets.version>1.0.0.1</gdoe-assets.version>
     </properties>
 
@@ -22,7 +23,7 @@
     <parent>
         <groupId>com.9isuper.eden</groupId>
         <artifactId>gdoe-parent</artifactId>
-        <version>1.0.0.3</version>
+        <version>1.0.0.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -52,4 +53,18 @@
         </developer>
     </developers>
 
+
+
+    <build>
+        <plugins>
+            <!-- pom文件的统一版本修改 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <configuration>
+                    <newVersion>${current.new.version}</newVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
