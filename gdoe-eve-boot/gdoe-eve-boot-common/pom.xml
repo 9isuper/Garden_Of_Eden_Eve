@@ -5,7 +5,7 @@
     <parent>
         <artifactId>gdoe-eve-boot</artifactId>
         <groupId>com.9isuper.eve</groupId>
-        <version>1.0.0.1</version>
+        <version>1.0.0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <name>伊甸园-夏娃-公共包</name>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.9isuper.eve</groupId>
             <artifactId>gdoe-eve-common</artifactId>
-            <version>${project.version}</version>
+            <version>${version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -84,22 +84,4 @@
 
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.9isuper.eden</groupId>
-                <artifactId>gdoe-assets</artifactId>
-                <version>${gdoe-assets.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

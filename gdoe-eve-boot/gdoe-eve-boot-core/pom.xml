@@ -5,7 +5,7 @@
     <parent>
         <artifactId>gdoe-eve-boot</artifactId>
         <groupId>com.9isuper.eve</groupId>
-        <version>1.0.0.1</version>
+        <version>1.0.0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <name>伊甸园-夏娃-核心启动</name>
@@ -14,9 +14,6 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-
-        <gdoe.adam.version>1.0.0.1</gdoe.adam.version>
-        <gdoe-assets.version>1.0.0.1</gdoe-assets.version>
     </properties>
 
     <dependencies>
@@ -24,7 +21,7 @@
         <dependency>
             <groupId>com.9isuper.eve</groupId>
             <artifactId>gdoe-eve-common</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.9isuper.eve</groupId>
@@ -37,7 +34,7 @@
         <dependency>
             <groupId>com.9isuper.eden</groupId>
             <artifactId>gdoe-adam-core</artifactId>
-            <version>${gdoe.adam.version}</version>
+            <version>${gdoe-adam.version}</version>
         </dependency>
         <!-- 核心框架依赖信息 -->
 
@@ -90,10 +87,10 @@
             <artifactId>spring-cloud-context</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.taobao.arthas</groupId>-->
-<!--            <artifactId>arthas-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.taobao.arthas</groupId>-->
+        <!--            <artifactId>arthas-spring-boot-starter</artifactId>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.retry</groupId>
@@ -136,24 +133,6 @@
 
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.9isuper.eden</groupId>
-                <artifactId>gdoe-assets</artifactId>
-                <version>${gdoe-assets.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <defaultGoal>compile</defaultGoal>

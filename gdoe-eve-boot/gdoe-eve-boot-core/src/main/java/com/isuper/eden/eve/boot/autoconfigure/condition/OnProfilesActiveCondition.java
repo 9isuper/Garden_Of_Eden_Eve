@@ -16,13 +16,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @ClassName OnProfilesActiveCondition
- * @Description
- * @Author admin
- * @Date 2021/6/24 15:43
- * @Version 1.0
- **/
+
 @Order(Ordered.HIGHEST_PRECEDENCE + 44)
 class OnProfilesActiveCondition extends SpringBootCondition {
     @Override

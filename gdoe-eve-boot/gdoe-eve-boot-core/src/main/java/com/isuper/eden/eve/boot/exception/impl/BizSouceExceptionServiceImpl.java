@@ -71,7 +71,7 @@ public class BizSouceExceptionServiceImpl implements BizExceptionService {
    * @param code 消息编码
    * @param defaultResultCode 默认返回的编码
    * @param codePropPath 资源路径
-   * @return
+   * @return String
    */
   private String getErrorCode(String code, String defaultResultCode, String codePropPath) {
     String errorCode = "";
@@ -93,7 +93,7 @@ public class BizSouceExceptionServiceImpl implements BizExceptionService {
    * @param defaultMassge 默认消息
    * @param i18nPath 资源文件路径
    * @param arguments 替换的参数
-   * @return
+   * @return String
    */
   private String getErrorMassage(
       String code, String defaultMassge, String i18nPath, Object... arguments) {
