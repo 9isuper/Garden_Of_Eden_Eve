@@ -19,7 +19,7 @@
 
     <properties>
         <current.new.version>1.0.0.2-SNAPSHOT</current.new.version>
-        <gdoe-assets.version>1.0.0.3</gdoe-assets.version>
+        <gdoe-assets.version>1.0.0.3-SNAPSHOT</gdoe-assets.version>
     </properties>
 
     <modules>
