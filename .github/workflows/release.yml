@@ -1,12 +1,11 @@
 # 相当于脚本用途的一个声明
-name: Deployment Snapshot To  Maven Central Repo
+name: Deployment Release To Maven Central Repo
 # 触发脚本的事件  这里为发布release之后触发
 on:
-  # 支持手动触发构建
-  workflow_dispatch:
- # release:
-    # 创建release的时候触发
-   # types: [published]
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 # 定义一个发行任务
 jobs:
   publish:
@@ -23,16 +22,18 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          server-id: sonatype-nexus-snapshots
+          server-id: sonatype-nexus-staging
           server-username: ${{ secrets.MAVEN_CENTER_USER_NAME }}
           server-password: ${{ secrets.MAVEN_CENTER_PASSWORD }}
           gpg-passphrase:  ${{ secrets.GPG_PASSWORD }}
+      - name: Get And Set Current Version
+        run: /bin/bash .github/workflows/version.sh $GITHUB_REF
 # 3. 发布到Maven中央仓库
       - name: Publish to Maven Central Repo
 # 这里用到了其他人写的action脚本，详细可以去看他的文档。
         uses: samuelmeuli/action-maven-publish@v1
         with:
-          server_id: sonatype-nexus-snapshots
+          server-id: sonatype-nexus-staging
           gpg_private_key: ${{ secrets.GPG_SECRET }}
           gpg_passphrase: ${{ secrets.GPG_PASSWORD }}
           nexus_username: ${{ secrets.MAVEN_CENTER_USER_NAME }}
